@@ -2,6 +2,10 @@
 
 @section('content')
 <div class="container">
+    <div class="d-flex justify-content-between align-items-center py-3">
+        <h2>Comics</h2>
+        <a class="btn btn-primary" href="{{route('comics.create')}}">Add Comics</a>
+    </div>
     <div class="table-responsive">
         <table class="table table-striped table-hover table-borderless table-primary align-middle">
             <thead>
@@ -11,8 +15,6 @@
                     <th scope="col">Image</th>
                     <th scope="col">Type</th>
                     <th scope="col">Series</th>
-                    <!-- <th scope="col">Date</th>
-                    <th scope="col">Price</th> -->
                     <th scope="col">Actions</th>
 
                 </tr>
@@ -25,8 +27,6 @@
                         <td><img width="60" src="{{$comic->thumb}}" alt=""></td>
                         <td>{{$comic->type}}</td>
                         <td>{{$comic->series}}</td>
-                        <!-- <td>{{$comic->sale_date}}</td>
-                            <td>{{$comic->price}}</td> -->
                         <td>
                             <a href="{{route('comics.show', $comic)}}">Comic Infos</a>
                         </td>
