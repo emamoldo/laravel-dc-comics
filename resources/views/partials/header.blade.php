@@ -1,6 +1,5 @@
-@extends('layouts.app')
-
-
-<h1>
-    Header Here
-</h1>
+<headder>
+    <h1>
+        Header Here
+    </h1>
+</headder>

@@ -12,7 +12,8 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+        // dd(Comics::all());
+        return view("comics.index", ['comics' => Comics::orderByDesc('id')->paginate(8)]);
     }
 
     /**

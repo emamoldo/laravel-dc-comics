@@ -1,6 +1,5 @@
-@extends('layouts.app')
-
-
-<h1>
-    Footer Here
-</h1>
+<footer>
+    <h1>
+        Footer Here
+    </h1>
+</footer>
