@@ -29,7 +29,19 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $comic = new Comics();
+        $comic->thumb = $data['thumb'];
+        $comic->title = $data['title'];
+        // $comic->type = $data['type'];
+        // $comic->series = $data['series'];
+        // $comic->sale_date = $data['sale_date'];
+        // $comic->price = $data['price'];
+        // $comic->description = $data['description'];
+        $comic->save();
+
+        return to_route('comics.index');
     }
 
     /**
