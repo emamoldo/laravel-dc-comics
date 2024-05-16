@@ -8,6 +8,16 @@
         </div>
         <div class="col">
             <h2>{{$comic->title}}</h2>
+            <div class="actions">
+                <a href="{{route('comics.edit', $comic)}}">
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+
+                <a href="{{route('comics.index')}}">
+                    <i class="fas fa-arrow-left fa-sm fa-fw"></i>
+                    Back to the comics Page
+                </a>
+            </div>
             <p>{{$comic->description}}</p>
 
             <div class="metadata">
