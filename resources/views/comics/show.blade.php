@@ -13,7 +13,7 @@
                     <i class="fa fa-pencil" aria-hidden="true"></i>
                 </a>
 
-                <a href="{{route('comics.index')}}">
+                <a class="text-decoration-none" href="{{route('comics.index')}}">
                     <i class="fas fa-arrow-left fa-sm fa-fw"></i>
                     Back to the comics Page
                 </a>
