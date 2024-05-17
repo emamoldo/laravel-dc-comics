@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+header {
+    margin-bottom: 2rem;
+
+
+    .logo {
+        height: 75px;
+        width: 75px;
+    }
+
+    .links {
+        a {
+            color: black;
+
+            i {
+                color: var(--dc-top-header);
+            }
+        }
+    }
+
+}
