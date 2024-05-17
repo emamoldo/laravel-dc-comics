@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreComicRequest;
+use App\Http\Requests\UpdateComicRequest;
 use App\Models\Comics;
 use Illuminate\Http\Request;
 
@@ -27,7 +29,7 @@ class ComicsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
         //$data = $request->all();
         // $comic = new Comics();
@@ -68,18 +70,10 @@ class ComicsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Comics $comic)
+    public function update(UpdateComicRequest $request, Comics $comic)
     {
         $comic->update($request->all());
-        $val_data = $request->validate([
-            'title' => 'required|min:3|max:100',
-            'thumb' => 'required|max:255',
-            'type' => 'nulable|min:5|max:50',
-            'series' => 'nullable|min:5|max:50',
-            'sale_date' => 'nullable|min:4|max:15',
-            'price' => 'nullable|max:6',
-            'description' => 'nullable|min:100|max:250',
-        ]);
+        $val_data = $request->validated();
         dd($val_data);
         $comic->update($val_data);
 
